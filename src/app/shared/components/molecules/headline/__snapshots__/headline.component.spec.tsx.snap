@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Headline /> renders correctly 1`] = `
+<View
+  className="headlinestyle__Container-sc-1ld0lkh-0 hIopwD"
+>
+  <Text
+    color="neutral100"
+    style={
+      {
+        "color": "",
+        "fontSize": 25,
+        "fontWeight": "normal",
+      }
+    }
+    type="Headline"
+  >
+    text
+  </Text>
+</View>
+`;

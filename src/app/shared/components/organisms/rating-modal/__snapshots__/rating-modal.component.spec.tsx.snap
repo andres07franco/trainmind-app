@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RatingModal /> renders correctly 1`] = `
+<Modal
+  animationType="slide"
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
+  testID="rating-modal"
+  transparent={true}
+  visible={true}
+>
+  <View
+    className="modalstyle__Container-sc-vqktr9-0 csngbu"
+  >
+    <View
+      className="modalstyle__ModalContent-sc-vqktr9-1 daRFSN"
+    >
+      <View
+        className="modal-bodycomponent__ModalBody-sc-asgp7i-0 zIEPz"
+      >
+        <Text
+          className="rating-modalstyle__Detail-sc-mxtzho-0 hQZMlz"
+          color="neutral100"
+          style={
+            {
+              "color": "",
+              "fontSize": 20,
+              "fontWeight": "normal",
+            }
+          }
+          type="Subtitle"
+        >
+          saveRatingTitle
+        </Text>
+        <View
+          className="rating-modalstyle__RateWrapper-sc-mxtzho-1 bMsnFC"
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "width": 40,
+              }
+            }
+            testID="star-rate-2"
+          >
+            <SvgMock
+              style={
+                {
+                  "marginLeft": 5,
+                  "marginTop": 3,
+                }
+              }
+            />
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "width": 40,
+              }
+            }
+            testID="star-rate-4"
+          >
+            <SvgMock
+              style={
+                {
+                  "marginLeft": 5,
+                  "marginTop": 3,
+                }
+              }
+            />
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "width": 40,
+              }
+            }
+            testID="star-rate-6"
+          >
+            <SvgMock
+              style={
+                {
+                  "marginLeft": 5,
+                  "marginTop": 3,
+                }
+              }
+            />
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "width": 40,
+              }
+            }
+            testID="star-rate-8"
+          >
+            <SvgMock
+              style={
+                {
+                  "marginLeft": 5,
+                  "marginTop": 3,
+                }
+              }
+            />
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "width": 40,
+              }
+            }
+            testID="star-rate-10"
+          >
+            <SvgMock
+              style={
+                {
+                  "marginLeft": 5,
+                  "marginTop": 3,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        className="modal-footercomponent__ModalFooter-sc-y58eci-0 exNUkd"
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "",
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 20,
+              "width": "50%",
+            }
+          }
+          testID="acction-button"
+        >
+          <Text
+            color="neutral100"
+            style={
+              [
+                {
+                  "color": "",
+                  "fontSize": 20,
+                  "fontWeight": "normal",
+                },
+                {
+                  "fontWeight": "600",
+                },
+              ]
+            }
+            type="Subtitle"
+          >
+            cancelButtonTitle
+          </Text>
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": true,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "",
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 20,
+              "width": "50%",
+            }
+          }
+          testID="save-rate-button"
+        >
+          <Text
+            color="neutral90"
+            style={
+              [
+                {
+                  "color": "",
+                  "fontSize": 20,
+                  "fontWeight": "normal",
+                },
+                {
+                  "fontWeight": "600",
+                },
+              ]
+            }
+            type="Subtitle"
+          >
+            saveRatingButtonTitle
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;

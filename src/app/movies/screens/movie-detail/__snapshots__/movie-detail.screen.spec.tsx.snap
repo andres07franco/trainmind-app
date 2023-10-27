@@ -1,0 +1,706 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieDetailScreen /> renders correctly 1`] = `
+<RCTScrollView
+  className="navigation-layoutcomponentstyle__StyledScrollView-sc-qvetyj-1 ezUgZU"
+>
+  <View>
+    <View
+      className="navigation-layoutcomponentstyle__Container-sc-qvetyj-0 fYeHUm"
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          className="back-buttonstyle__Container-sc-19rvct6-0 jELueW"
+        >
+          <SvgMock
+            style={
+              {
+                "marginLeft": -4,
+              }
+            }
+          />
+        </View>
+      </View>
+      <Image
+        height={300}
+        posterPath="/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg"
+        source={
+          {
+            "uri": "/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
+          }
+        }
+        type="Big"
+        width={750}
+      />
+      <View
+        className="blockcomponent__Block-sc-1ktei2t-0 ipBEdc"
+      >
+        <View
+          className="cardcomponent__Card-sc-d7o94l-0 loading-sectionstyle__StyledCard-sc-t7kks6-0 gDJANb fPBuWn"
+          style={
+            {
+              "marginTop": -80,
+            }
+          }
+        >
+          <View
+            className="movie-detail-blockstyle__Container-sc-7wyw6k-0 hZqSEo"
+          >
+            <View
+              className="movie-detail-blockstyle__RateButtonContent-sc-7wyw6k-3 fxIPhq"
+            >
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "opacity": 1,
+                  }
+                }
+                testID="rate-button"
+              >
+                <View
+                  className="rate-buttonstyle__Container-sc-m3k239-0 iyLBiP"
+                >
+                  <SvgMock />
+                </View>
+              </View>
+            </View>
+            <Text
+              className="movie-detail-blockstyle__Title-sc-7wyw6k-1 gDeuDK"
+              color="neutral100"
+              style={
+                {
+                  "color": "",
+                  "fontSize": 30,
+                  "fontWeight": "normal",
+                }
+              }
+              type="Title"
+            >
+              AVENGERS
+            </Text>
+            <View
+              className="ratingstyle__Container-sc-1qf82rc-0 ctGIdS"
+            >
+              <Text
+                className="ratingstyle__RateText-sc-1qf82rc-1 htfkJv"
+                color="tertiary10"
+                style={
+                  {
+                    "color": "",
+                    "fontSize": 22,
+                    "fontWeight": "normal",
+                  }
+                }
+                type="BigValue"
+              >
+                10
+              </Text>
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessible={true}
+                focusable={false}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "width": 20,
+                  }
+                }
+                testID="star-rate"
+              >
+                <SvgMock
+                  style={
+                    {
+                      "marginLeft": 5,
+                      "marginTop": 5,
+                    }
+                  }
+                />
+              </View>
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessible={true}
+                focusable={false}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "width": 20,
+                  }
+                }
+                testID="star-rate"
+              >
+                <SvgMock
+                  style={
+                    {
+                      "marginLeft": 5,
+                      "marginTop": 5,
+                    }
+                  }
+                />
+              </View>
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessible={true}
+                focusable={false}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "width": 20,
+                  }
+                }
+                testID="star-rate"
+              >
+                <SvgMock
+                  style={
+                    {
+                      "marginLeft": 5,
+                      "marginTop": 5,
+                    }
+                  }
+                />
+              </View>
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessible={true}
+                focusable={false}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "width": 20,
+                  }
+                }
+                testID="star-rate"
+              >
+                <SvgMock
+                  style={
+                    {
+                      "marginLeft": 5,
+                      "marginTop": 5,
+                    }
+                  }
+                />
+              </View>
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": undefined,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessible={true}
+                focusable={false}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "width": 20,
+                  }
+                }
+                testID="star-rate"
+              >
+                <SvgMock
+                  style={
+                    {
+                      "marginLeft": 5,
+                      "marginTop": 5,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              className="movie-detail-blockstyle__Detail-sc-7wyw6k-2 ZAbTQ"
+              color="neutral90"
+              style={
+                {
+                  "color": "",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                }
+              }
+              type="Caption"
+            >
+              ReleaseYearLabel
+              : 
+              2023
+            </Text>
+            <Text
+              className="movie-detail-blockstyle__Detail-sc-7wyw6k-2 ZAbTQ"
+              color="neutral90"
+              style={
+                {
+                  "color": "",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                }
+              }
+              type="Caption"
+            >
+              movie overview
+            </Text>
+            <Text
+              className="movie-detail-blockstyle__Detail-sc-7wyw6k-2 ZAbTQ"
+              color="neutral90"
+              style={
+                {
+                  "color": "",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                }
+              }
+              type="Caption"
+            >
+              GenersLabel
+              : 
+              Coemdy
+            </Text>
+            <Text
+              className="movie-detail-blockstyle__Detail-sc-7wyw6k-2 kdKSCv"
+              color="neutral90"
+              style={
+                {
+                  "color": "",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                }
+              }
+              textAlign="right"
+              type="Caption"
+            >
+              GeneralAudienceText
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        className="blockcomponent__Block-sc-1ktei2t-0 ipBEdc"
+      >
+        <View
+          className="cardcomponent__Card-sc-d7o94l-0 loading-sectionstyle__StyledCard-sc-t7kks6-0 gDJANb fPBuWn"
+          style={
+            {
+              "marginTop": -30,
+            }
+          }
+        >
+          <View
+            className="casting-liststyle__Container-sc-12zasg7-0 hvzvMC"
+          >
+            <Text
+              className="casting-liststyle__Title-sc-12zasg7-2 iSeTYC"
+              color="neutral100"
+              style={
+                {
+                  "color": "",
+                  "fontSize": 20,
+                  "fontWeight": "normal",
+                }
+              }
+              type="Subtitle"
+            >
+              ActorText
+            </Text>
+            <RCTScrollView
+              data={
+                [
+                  {
+                    "castId": 1,
+                    "character": "andres",
+                    "name": "carlos",
+                    "profilePath": "",
+                  },
+                ]
+              }
+              getItem={[Function]}
+              getItemCount={[Function]}
+              horizontal={true}
+              initialNumToRender={4}
+              keyExtractor={[Function]}
+              onContentSizeChange={[Function]}
+              onLayout={[Function]}
+              onMomentumScrollBegin={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              removeClippedSubviews={false}
+              renderItem={[Function]}
+              scrollEventThrottle={50}
+              stickyHeaderIndices={[]}
+              viewabilityConfigCallbackPairs={[]}
+            >
+              <View>
+                <View
+                  onFocusCapture={[Function]}
+                  onLayout={[Function]}
+                  style={
+                    [
+                      {
+                        "flexDirection": "row",
+                      },
+                      null,
+                    ]
+                  }
+                >
+                  <View
+                    className="casting-liststyle__Content-sc-12zasg7-1 fkNOZZ"
+                  >
+                    <Image
+                      className="actor-imagecomponent__ActorImage-sc-1hgvt6a-0 dNnmUz"
+                      source={
+                        {
+                          "uri": "",
+                        }
+                      }
+                    />
+                    <Text
+                      className="casting-liststyle__Title-sc-12zasg7-2 gSQwQC"
+                      color="neutral100"
+                      style={
+                        {
+                          "color": "",
+                          "fontSize": 12,
+                          "fontWeight": "normal",
+                        }
+                      }
+                      textAlign="center"
+                      type="Caption"
+                    >
+                      carlos
+                    </Text>
+                    <Text
+                      className="casting-liststyle__Detail-sc-12zasg7-3 dQxHGK"
+                      color="neutral90"
+                      style={
+                        {
+                          "color": "",
+                          "fontSize": 12,
+                          "fontWeight": "normal",
+                        }
+                      }
+                      type="Caption"
+                    >
+                      andres
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </RCTScrollView>
+          </View>
+        </View>
+      </View>
+      <View
+        className="blockcomponent__Block-sc-1ktei2t-0 ipBEdc"
+      >
+        <View
+          className="cardcomponent__Card-sc-d7o94l-0 loading-sectionstyle__StyledCard-sc-t7kks6-0 gDJANb fPBuWn"
+          style={
+            {
+              "marginTop": -30,
+            }
+          }
+        >
+          <View
+            className="movie-carouselstyle__Container-sc-em9zib-0 fjJFky"
+          >
+            <Text
+              className="movie-carouselstyle__Title-sc-em9zib-2 dUfhUy"
+              color="neutral100"
+              style={
+                {
+                  "color": "",
+                  "fontSize": 20,
+                  "fontWeight": "normal",
+                }
+              }
+              type="Subtitle"
+            >
+              similarsTile
+            </Text>
+            <RCTScrollView
+              data={
+                [
+                  {
+                    "id": 2,
+                    "posterPath": "",
+                    "title": "TRANSFORMERS",
+                  },
+                ]
+              }
+              getItem={[Function]}
+              getItemCount={[Function]}
+              horizontal={true}
+              initialNumToRender={3}
+              keyExtractor={[Function]}
+              onContentSizeChange={[Function]}
+              onLayout={[Function]}
+              onMomentumScrollBegin={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              removeClippedSubviews={false}
+              renderItem={[Function]}
+              scrollEventThrottle={50}
+              stickyHeaderIndices={[]}
+              viewabilityConfigCallbackPairs={[]}
+            >
+              <View>
+                <View
+                  onFocusCapture={[Function]}
+                  onLayout={[Function]}
+                  style={
+                    [
+                      {
+                        "flexDirection": "row",
+                      },
+                      null,
+                    ]
+                  }
+                >
+                  <View
+                    className="movie-carouselstyle__Content-sc-em9zib-1 eugGsv"
+                  >
+                    <Image
+                      height={170}
+                      posterPath=""
+                      source={
+                        {
+                          "uri": "",
+                        }
+                      }
+                      type="Small"
+                      width={120}
+                    />
+                  </View>
+                </View>
+              </View>
+            </RCTScrollView>
+          </View>
+        </View>
+      </View>
+      <View
+        className="blockcomponent__Block-sc-1ktei2t-0 ipBEdc"
+      >
+        <View
+          className="cardcomponent__Card-sc-d7o94l-0 loading-sectionstyle__StyledCard-sc-t7kks6-0 gDJANb fPBuWn"
+          style={
+            {
+              "marginTop": -30,
+            }
+          }
+        >
+          <View
+            className="movie-carouselstyle__Container-sc-em9zib-0 fjJFky"
+          >
+            <Text
+              className="movie-carouselstyle__Title-sc-em9zib-2 dUfhUy"
+              color="neutral100"
+              style={
+                {
+                  "color": "",
+                  "fontSize": 20,
+                  "fontWeight": "normal",
+                }
+              }
+              type="Subtitle"
+            >
+              recomendationsTile
+            </Text>
+            <RCTScrollView
+              data={
+                [
+                  {
+                    "id": 2,
+                    "posterPath": "",
+                    "title": "TRANSFORMERS",
+                  },
+                ]
+              }
+              getItem={[Function]}
+              getItemCount={[Function]}
+              horizontal={true}
+              initialNumToRender={3}
+              keyExtractor={[Function]}
+              onContentSizeChange={[Function]}
+              onLayout={[Function]}
+              onMomentumScrollBegin={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              removeClippedSubviews={false}
+              renderItem={[Function]}
+              scrollEventThrottle={50}
+              stickyHeaderIndices={[]}
+              viewabilityConfigCallbackPairs={[]}
+            >
+              <View>
+                <View
+                  onFocusCapture={[Function]}
+                  onLayout={[Function]}
+                  style={
+                    [
+                      {
+                        "flexDirection": "row",
+                      },
+                      null,
+                    ]
+                  }
+                >
+                  <View
+                    className="movie-carouselstyle__Content-sc-em9zib-1 eugGsv"
+                  >
+                    <Image
+                      height={170}
+                      posterPath=""
+                      source={
+                        {
+                          "uri": "",
+                        }
+                      }
+                      type="Small"
+                      width={120}
+                    />
+                  </View>
+                </View>
+              </View>
+            </RCTScrollView>
+          </View>
+        </View>
+      </View>
+      <Modal
+        animationType="slide"
+        hardwareAccelerated={false}
+        onRequestClose={[Function]}
+        testID="rating-modal"
+        transparent={true}
+        visible={false}
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;

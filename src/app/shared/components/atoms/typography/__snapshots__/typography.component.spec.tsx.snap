@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Typography /> renders correctly 1`] = `
+<Text
+  color="neutral100"
+  style={
+    {
+      "color": "",
+      "fontSize": 25,
+      "fontWeight": "normal",
+    }
+  }
+  type="Headline"
+>
+  text
+</Text>
+`;

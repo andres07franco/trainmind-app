@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CastingList /> renders correctly 1`] = `
+<View
+  className="casting-liststyle__Container-sc-12zasg7-0 hvzvMC"
+>
+  <Text
+    className="casting-liststyle__Title-sc-12zasg7-2 iSeTYC"
+    color="neutral100"
+    style={
+      {
+        "color": "",
+        "fontSize": 20,
+        "fontWeight": "normal",
+      }
+    }
+    type="Subtitle"
+  >
+    ActorText
+  </Text>
+  <RCTScrollView
+    data={
+      [
+        {
+          "castId": 1,
+          "character": "SuperMan",
+          "name": "Carlos",
+          "profilePath": "",
+        },
+        {
+          "castId": 1,
+          "character": "Acuaman",
+          "name": "Carlos Andres Marriaga",
+          "profilePath": "",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    initialNumToRender={4}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={
+          [
+            {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          className="casting-liststyle__Content-sc-12zasg7-1 fkNOZZ"
+        >
+          <Image
+            className="actor-imagecomponent__ActorImage-sc-1hgvt6a-0 dNnmUz"
+            source={
+              {
+                "uri": "",
+              }
+            }
+          />
+          <Text
+            className="casting-liststyle__Title-sc-12zasg7-2 gSQwQC"
+            color="neutral100"
+            style={
+              {
+                "color": "",
+                "fontSize": 12,
+                "fontWeight": "normal",
+              }
+            }
+            textAlign="center"
+            type="Caption"
+          >
+            Carlos
+          </Text>
+          <Text
+            className="casting-liststyle__Detail-sc-12zasg7-3 dQxHGK"
+            color="neutral90"
+            style={
+              {
+                "color": "",
+                "fontSize": 12,
+                "fontWeight": "normal",
+              }
+            }
+            type="Caption"
+          >
+            SuperMan
+          </Text>
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={
+          [
+            {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          className="casting-liststyle__Content-sc-12zasg7-1 fkNOZZ"
+        >
+          <Image
+            className="actor-imagecomponent__ActorImage-sc-1hgvt6a-0 dNnmUz"
+            source={
+              {
+                "uri": "",
+              }
+            }
+          />
+          <Text
+            className="casting-liststyle__Title-sc-12zasg7-2 gSQwQC"
+            color="neutral100"
+            style={
+              {
+                "color": "",
+                "fontSize": 12,
+                "fontWeight": "normal",
+              }
+            }
+            textAlign="center"
+            type="Caption"
+          >
+            Carlos Andres
+          </Text>
+          <Text
+            className="casting-liststyle__Detail-sc-12zasg7-3 dQxHGK"
+            color="neutral90"
+            style={
+              {
+                "color": "",
+                "fontSize": 12,
+                "fontWeight": "normal",
+              }
+            }
+            type="Caption"
+          >
+            Acuaman
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieDetailBlock /> renders correctly 1`] = `
+<View
+  className="movie-detail-blockstyle__Container-sc-7wyw6k-0 hZqSEo"
+>
+  <View
+    className="movie-detail-blockstyle__RateButtonContent-sc-7wyw6k-3 fxIPhq"
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="rate-button"
+    >
+      <View
+        className="rate-buttonstyle__Container-sc-m3k239-0 iyLBiP"
+      >
+        <SvgMock />
+      </View>
+    </View>
+  </View>
+  <Text
+    className="movie-detail-blockstyle__Title-sc-7wyw6k-1 gDeuDK"
+    color="neutral100"
+    style={
+      {
+        "color": "",
+        "fontSize": 30,
+        "fontWeight": "normal",
+      }
+    }
+    type="Title"
+  >
+    AVENGERS
+  </Text>
+  <View
+    className="ratingstyle__Container-sc-1qf82rc-0 ctGIdS"
+  >
+    <Text
+      className="ratingstyle__RateText-sc-1qf82rc-1 htfkJv"
+      color="tertiary10"
+      style={
+        {
+          "color": "",
+          "fontSize": 22,
+          "fontWeight": "normal",
+        }
+      }
+      type="BigValue"
+    >
+      10
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessible={true}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "width": 20,
+        }
+      }
+      testID="star-rate"
+    >
+      <SvgMock
+        style={
+          {
+            "marginLeft": 5,
+            "marginTop": 5,
+          }
+        }
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessible={true}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "width": 20,
+        }
+      }
+      testID="star-rate"
+    >
+      <SvgMock
+        style={
+          {
+            "marginLeft": 5,
+            "marginTop": 5,
+          }
+        }
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessible={true}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "width": 20,
+        }
+      }
+      testID="star-rate"
+    >
+      <SvgMock
+        style={
+          {
+            "marginLeft": 5,
+            "marginTop": 5,
+          }
+        }
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessible={true}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "width": 20,
+        }
+      }
+      testID="star-rate"
+    >
+      <SvgMock
+        style={
+          {
+            "marginLeft": 5,
+            "marginTop": 5,
+          }
+        }
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessible={true}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "width": 20,
+        }
+      }
+      testID="star-rate"
+    >
+      <SvgMock
+        style={
+          {
+            "marginLeft": 5,
+            "marginTop": 5,
+          }
+        }
+      />
+    </View>
+  </View>
+  <Text
+    className="movie-detail-blockstyle__Detail-sc-7wyw6k-2 ZAbTQ"
+    color="neutral90"
+    style={
+      {
+        "color": "",
+        "fontSize": 12,
+        "fontWeight": "normal",
+      }
+    }
+    type="Caption"
+  >
+    ReleaseYearLabel
+    : 
+    2023
+  </Text>
+  <Text
+    className="movie-detail-blockstyle__Detail-sc-7wyw6k-2 ZAbTQ"
+    color="neutral90"
+    style={
+      {
+        "color": "",
+        "fontSize": 12,
+        "fontWeight": "normal",
+      }
+    }
+    type="Caption"
+  >
+    movie overview
+  </Text>
+  <Text
+    className="movie-detail-blockstyle__Detail-sc-7wyw6k-2 ZAbTQ"
+    color="neutral90"
+    style={
+      {
+        "color": "",
+        "fontSize": 12,
+        "fontWeight": "normal",
+      }
+    }
+    type="Caption"
+  >
+    GenersLabel
+    : 
+    Comedy, Action
+  </Text>
+  <Text
+    className="movie-detail-blockstyle__Detail-sc-7wyw6k-2 kdKSCv"
+    color="neutral90"
+    style={
+      {
+        "color": "",
+        "fontSize": 12,
+        "fontWeight": "normal",
+      }
+    }
+    textAlign="right"
+    type="Caption"
+  >
+    GeneralAudienceText
+  </Text>
+</View>
+`;

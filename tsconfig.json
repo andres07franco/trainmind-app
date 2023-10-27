@@ -1,0 +1,30 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "@movies/*": ["./src/app/movies/*"],
+      "@movies": ["src/app/movies/movies.module.ts"],
+      "@authentication/*": ["./src/app/authentication/*"],
+      "@authentication": ["src/app/authentication/authentication.module.ts"],
+      "@interview/*": ["./src/app/interview/*"],
+      "@interview": ["src/app/interview/interview.module.ts"],
+      "@core/*": ["./src/app/core/*"],
+      "@core": ["src/app/core/core.module.ts"],
+      "@shared/*": ["./src/app/shared/*"],
+      "@shared": ["src/app/shared/shared.module.ts"],
+      "@ui-components/*": ["./src/app/shared/components/*"],
+      "@ui-components": ["src/app/shared/components/index.ts"],
+      "@translations/*": ["./src/libs/translations/*"],
+      "@translations": ["src/libs/translations/translations.module.ts"],
+      "@assets/*": ["./assets/*"],
+    }
+  },
+  "typeRoots": ["./src/app/shared/types"],
+  "types": [
+    "styled-components-react-native",
+    "jest"
+  ]
+}
