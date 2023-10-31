@@ -7,5 +7,5 @@ export const Container = styled(View)`
   padding-horizontal: ${PixelRatio.roundToNearestPixel(30)}px;
   padding-top: ${PixelRatio.roundToNearestPixel(20)}px;
   padding-bottom: ${PixelRatio.roundToNearestPixel(15)}px;
-  text-align: 'left';
+  text-align: left;
 `;

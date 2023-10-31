@@ -10,8 +10,8 @@ module.exports = function (api) {
         {
           root: ['./'],
           alias: {
-            '@movies': './src/app/movies',
             '@authentication': './src/app/authentication',
+            '@onboarding': './src/app/onboarding',
             '@interview': './src/app/interview',
             '@shared': './src/app/shared',
             '@core': './src/app/core',

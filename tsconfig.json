@@ -5,10 +5,10 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@movies/*": ["./src/app/movies/*"],
-      "@movies": ["src/app/movies/movies.module.ts"],
       "@authentication/*": ["./src/app/authentication/*"],
       "@authentication": ["src/app/authentication/authentication.module.ts"],
+      "@onboarding/*": ["./src/app/onboarding/*"],
+      "@onboarding": ["src/app/onboarding/onboarding.module.ts"],
       "@interview/*": ["./src/app/interview/*"],
       "@interview": ["src/app/interview/interview.module.ts"],
       "@core/*": ["./src/app/core/*"],

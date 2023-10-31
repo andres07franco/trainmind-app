@@ -11,21 +11,27 @@ interface ContainerProps extends TouchableOpacityProps {
 }
 
 export const Container = styled(TouchableOpacity)<ContainerProps>`
-  width: 50%;
-  padding-horizontal: ${PixelRatio.roundToNearestPixel(20)}px;
-  padding-vertical: ${PixelRatio.roundToNearestPixel(20)}px;
+  margin: ${PixelRatio.roundToNearestPixel(5)}px;
+  padding-horizontal: ${PixelRatio.roundToNearestPixel(6)}px;
+  padding-vertical: ${PixelRatio.roundToNearestPixel(6)}px;
   justify-content: center;
   align-items: center;
   background-color: ${({ buttonType, theme }) => {
     switch (buttonType) {
       case 'primary':
-        return theme.quaternary10;
+        return theme.primary10;
       case 'secondary':
-        return theme.primary40;
+        return theme.secondary10;
       default:
-        return theme.quaternary10;
+        return theme.primary10;
     }
   }};
+  border-radius: ${PixelRatio.roundToNearestPixel(25)}px;
+  shadow-opacity: 0.37;
+  shadow-radius: 7px;
+  shadow-color: #000;
+  shadow-offset: 0px 4px;
+  elevation: 12;
 `;
 
 export const Text = styled(Typography)`

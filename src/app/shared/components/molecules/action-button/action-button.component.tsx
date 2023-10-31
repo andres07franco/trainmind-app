@@ -38,7 +38,8 @@ export const ActionButton: React.FC<Props> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [asyncDisabled]);
 
-  const textColor = disabled ? 'neutral90' : 'neutral100';
+  let textColor = type !== 'primary' ? 'primary10' : 'secondary10';
+  textColor = disabled ? 'neutral90' : textColor;
   return (
     <Container
       {...{ buttonType: type }}
@@ -49,7 +50,7 @@ export const ActionButton: React.FC<Props> = ({
       {asyncDisabled ? (
         <ActivityIndicator />
       ) : (
-        <Text type="Subtitle" color={textColor}>
+        <Text type="Subtitle2" color={textColor}>
           {title}
         </Text>
       )}
