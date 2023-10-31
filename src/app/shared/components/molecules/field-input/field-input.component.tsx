@@ -1,12 +1,12 @@
 import React from 'react';
 import { Control } from 'react-hook-form';
-import { Label, InputStyled, ErrorText } from './field-input.style';
+import { Container, Label, InputStyled, ErrorText } from './field-input.style';
 
 interface Props {
   testID?: string;
   control: Control<any>;
   name: string;
-  label: string;
+  label?: string;
   hasError: boolean;
   errorMessage: string;
   secureTextEntry?: boolean;
@@ -20,10 +20,12 @@ export const FieldInput: React.FC<Props> = ({
   secureTextEntry,
 }) => {
   return (
-    <>
-      <Label type="Subtitle" color="neutral100">
-        {label}
-      </Label>
+    <Container>
+      {label && (
+        <Label type="Subtitle" color="neutral100">
+          {label}
+        </Label>
+      )}
       <InputStyled
         control={control}
         name={name}
@@ -36,12 +38,13 @@ export const FieldInput: React.FC<Props> = ({
           {errorMessage}
         </ErrorText>
       )}
-    </>
+    </Container>
   );
 };
 
 FieldInput.defaultProps = {
   testID: 'field-input',
+  label: '',
 };
 
 export default FieldInput;

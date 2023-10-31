@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Text } from 'react-native';
+import { Button, Platform, Text } from 'react-native';
 import { BasicLayout } from '@ui-components/templates';
 import Tts from 'react-native-tts';
 import Voice, {
@@ -8,7 +8,8 @@ import Voice, {
   SpeechErrorEvent,
 } from '@react-native-voice/voice';
 import axios from 'axios';
-const token = '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';
+import { ActionButton } from '@shared/components';
+const token = '';
 
 async function openAIChatCompletion(text: string) {
   console.log('response', text);
@@ -55,7 +56,9 @@ const InterviewScreen: React.FC = () => {
   });
   const [speechRate, setSpeechRate] = useState(0.5);
   const [speechPitch, setSpeechPitch] = useState(1);
-  const [text, setText] = useState('Enter Text like Hello About React');
+  const [text, setText] = useState(
+    'Hello, I hope you are well. I have some question for you, the first one is:  what is a react component?',
+  );
   const [ttsStatus, setTtsStatus] = useState('initiliazing');
   const onSpeechStart = (e: any) => {
     console.log('onSpeechStart: ', e);
@@ -147,22 +150,29 @@ const InterviewScreen: React.FC = () => {
   };
   const initTts = async () => {
     const voices = await Tts.voices();
-    const availableVoices = voices
-      .filter((v) => !v.networkConnectionRequired && !v.notInstalled)
-      .map((v) => {
-        return { id: v.id, name: v.name, language: v.language };
-      });
+    const id =
+      Platform.OS === 'ios'
+        ? 'com.apple.voice.compact.en-US.Samantha'
+        : 'en-us-x-sfg-local';
+    const availableVoices = voices.filter(
+      (v) =>
+        !v.networkConnectionRequired &&
+        !v.notInstalled &&
+        v.language.indexOf('en-US') > -1 &&
+        v.id === id,
+    );
+    console.log(availableVoices);
     let selectedVoice = null;
-    if (voices && voices.length > 0) {
-      selectedVoice = voices[0].id;
+    if (availableVoices && availableVoices.length > 0) {
+      selectedVoice = availableVoices[0];
       try {
-        await Tts.setDefaultLanguage(voices[0].language);
+        await Tts.setDefaultLanguage(selectedVoice.language);
       } catch (err) {
         //Samsung S9 has always this error:
         //"Language is not supported"
         console.log(`setDefaultLanguage error `, err);
       }
-      await Tts.setDefaultVoice(voices[0].id);
+      await Tts.setDefaultVoice(selectedVoice.id);
     } else {
     }
   };
@@ -175,13 +185,13 @@ const InterviewScreen: React.FC = () => {
     Tts.setDefaultPitch(speechPitch);
     Tts.getInitStatus().then(initTts);
     return () => {
-      Tts.removeEventListener('tts-start', (_event) => setTtsStatus('started'));
-      Tts.removeEventListener('tts-finish', (_event) =>
-        setTtsStatus('finished'),
-      );
-      Tts.removeEventListener('tts-cancel', (_event) =>
-        setTtsStatus('cancelled'),
-      );
+      // Tts.removeEventListener('tts-start', (_event) => setTtsStatus('started'));
+      // Tts.removeEventListener('tts-finish', (_event) =>
+      //   setTtsStatus('finished'),
+      // );
+      // Tts.removeEventListener('tts-cancel', (_event) =>
+      //   setTtsStatus('cancelled'),
+      // );
     };
   }, []);
 
@@ -199,18 +209,20 @@ const InterviewScreen: React.FC = () => {
   }, []);
 
   return (
-    <BasicLayout title="Welcomme">
-      <Text style={{ color: 'white' }}>question:{text}</Text>
-      <Button title={'Read quesion'} onPress={readText} />
-      <Text style={{ color: 'white' }}>results:{results.join(' ')}</Text>
-      <Button
+    <BasicLayout title="Welcome">
+      <Text>question:{text}</Text>
+      <ActionButton title={'Read quesion'} onPress={readText} type="primary" />
+      <Text>results:{results.join(' ')}</Text>
+      <ActionButton
         title={started ? 'Stop Recording' : 'Start Recording'}
         onPress={started ? _stopRecognizing : _startRecognizing}
+        type="secondary"
       />
       {results.length > 0 && (
-        <Button
+        <ActionButton
           title={'send'}
           onPress={async () => await openAIChatCompletion(results[0])}
+          type="secondary"
         />
       )}
     </BasicLayout>

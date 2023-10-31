@@ -1,6 +1,14 @@
 import React from 'react';
 import { Headline } from '../../molecules';
-import { Container } from './basic-layout.style';
+import {
+  Container,
+  Header,
+  Body,
+  ImageContent,
+  ImageContainer,
+} from './basic-layout.style';
+import { Image } from 'react-native';
+import { Typography } from '../../atoms';
 
 interface Props {
   title: string;
@@ -9,8 +17,23 @@ interface Props {
 const BasicLayout: React.FC<Props> = ({ title, children }) => {
   return (
     <Container>
-      <Headline text={title} />
-      {children}
+      <Header>
+        <Typography type="Title" color="neutral100">
+          {title}
+        </Typography>
+      </Header>
+      <Body>
+        <ImageContainer>
+          <ImageContent>
+            <Image
+              source={require('../../../../../../assets/images/wamba.png')}
+              style={{ width: 160, height: 160 }}
+            />
+          </ImageContent>
+        </ImageContainer>
+
+        {children}
+      </Body>
     </Container>
   );
 };

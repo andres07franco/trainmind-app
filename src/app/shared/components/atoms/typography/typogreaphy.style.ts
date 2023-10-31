@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components/native';
-import { Text as NativeText } from 'react-native';
+import { Text as NativeText, PixelRatio } from 'react-native';
 
 export interface TextProps {
   type:
@@ -15,6 +15,7 @@ export interface TextProps {
 }
 
 export const Text = styled(NativeText)<TextProps>`
+  margin: ${PixelRatio.roundToNearestPixel(5)}px;
   color: ${({ color, theme }) => theme[color]};
   font-size: ${({ type }) => {
     switch (type) {
@@ -38,9 +39,8 @@ export const Text = styled(NativeText)<TextProps>`
   }}px;
   font-weight: ${({ type }) => {
     switch (type) {
-      case 'Value':
-      case 'BigValue':
-        return 'normal';
+      case 'Title':
+        return 'bold';
       default:
         return 'normal';
     }
