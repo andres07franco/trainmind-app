@@ -1,18 +1,15 @@
 import React from 'react';
-import BackIcon from '@assets/back.svg';
-import { Container, TouchableOpacityStyled } from './back-button.style';
+import { TouchableOpacityStyled } from './back-button.style';
+import { Icon } from '..';
 
 interface Props {
   onPress: () => void;
 }
 export const BackButton: React.FC<Props> = ({ onPress }) => {
   const handlePress = () => onPress();
-  const marginFixStyle = { marginLeft: -4 };
   return (
     <TouchableOpacityStyled onPress={handlePress}>
-      <Container>
-        <BackIcon style={marginFixStyle} />
-      </Container>
+      <Icon code="back" />
     </TouchableOpacityStyled>
   );
 };

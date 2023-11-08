@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "213436537603",
+    "project_id": "trainmind-14987",
+    "storage_bucket": "trainmind-14987.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213436537603:android:42231cbc7bf98517ae2736",
+        "android_client_info": {
+          "package_name": "com.trainmindapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSa_Ea5L7OzXOtBjbB0SVmF5qi_IBolTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

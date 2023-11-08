@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import FavoriteIcon from '@assets/favorite.svg';
-import FavoriteOutlineIcon from '@assets/favorite-outline.svg';
+import FavoriteIcon from '@assets/icons/favorite.svg';
+import FavoriteOutlineIcon from '@assets/icons/favorite-outline.svg';
 import { TouchableOpacity } from 'react-native';
 import { StyledActivityIndicator } from './favorite-button.style';
 

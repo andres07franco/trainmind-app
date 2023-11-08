@@ -1,3 +1,3 @@
 export * from './basic-layout/basic-layout.component';
-export * from './navigation-layout/navigation-layout.component';
 export * from './tab-layout/tab-layout.component';
+export * from './activity-list-layout/activity-list-layout.component';

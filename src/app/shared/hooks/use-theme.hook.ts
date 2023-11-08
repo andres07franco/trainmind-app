@@ -16,5 +16,6 @@ export const useTheme = () => {
   };
   return {
     theme,
+    colorScheme,
   };
 };

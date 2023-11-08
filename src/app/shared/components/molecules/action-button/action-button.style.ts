@@ -1,8 +1,4 @@
-import {
-  PixelRatio,
-  TouchableOpacity,
-  TouchableOpacityProps,
-} from 'react-native';
+import { PixelRatio, TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import styled from 'styled-components/native';
 import { Typography } from '../../atoms';
 
@@ -11,6 +7,7 @@ interface ContainerProps extends TouchableOpacityProps {
 }
 
 export const Container = styled(TouchableOpacity)<ContainerProps>`
+  min-width:  ${PixelRatio.roundToNearestPixel(140)}px;
   margin: ${PixelRatio.roundToNearestPixel(5)}px;
   padding-horizontal: ${PixelRatio.roundToNearestPixel(6)}px;
   padding-vertical: ${PixelRatio.roundToNearestPixel(6)}px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import LoginCricleIcon from '@assets/login-circle.svg';
-import ProfileCricleIcon from '@assets/profile-circle.svg';
+import LoginCricleIcon from '@assets/icons/login-circle.svg';
+import ProfileCricleIcon from '@assets/icons/profile-circle.svg';
 
 interface Props {
   sessionStarted: boolean;

@@ -1,7 +1,6 @@
-export * from './actor-image/actor-image.component';
+export * from './avatar-image/avatar-image.component';
 export * from './block/block.component';
 export * from './card/card.component';
-export * from './poster-image/poster-image.component';
 export * from './typography/typography.component';
 export * from './star-rate/star-rate.component';
 export * from './rate-button/rate-button.component';
@@ -12,3 +11,5 @@ export * from './input/input.component';
 export * from './modal-body/modal-body.component';
 export * from './modal-footer/modal-footer.component';
 export * from './favorite-button/favorite-button.component';
+export * from './more-button/more-button.component';
+export * from './icon/icon.component';

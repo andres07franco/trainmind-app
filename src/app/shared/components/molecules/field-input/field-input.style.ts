@@ -20,6 +20,12 @@ export const InputStyled = styled(Input)<InputProps>`
   padding-left: ${PixelRatio.roundToNearestPixel(15)}px;
   padding-right: ${PixelRatio.roundToNearestPixel(15)}px;
   width: 100%;
+  min-width:250px;
+  shadow-opacity: 0.37;
+  shadow-radius: 7px;
+  shadow-color: #000;
+  shadow-offset: 0px 4px;
+  elevation: 12;
 `;
 
 export const ErrorText = styled(Typography)`

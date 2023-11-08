@@ -7,7 +7,6 @@ import { RootSiblingParent } from 'react-native-root-siblings';
 import { Provider as StoreProvider } from 'react-redux';
 import AppRoutes from './src/app/app.routes';
 import { store } from './src/app/app.store';
-import { AuthenticationRoutes } from '@authentication';
 
 export default function App() {
   const { theme } = useTheme();
@@ -19,7 +18,6 @@ export default function App() {
           <NavigationContainer>
             <AppRoutes />
           </NavigationContainer>
-          <AuthenticationRoutes />
         </RootSiblingParent>
       </StoreProvider>
     </ThemeProvider>

@@ -1,79 +1,99 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# TRAINMIND APP
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Amazing app to practice any knowledge area.
 
-## Step 1: Start the Metro Server
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Screenshots
 
-To start Metro, run the following command from the _root_ of your React Native project:
+![Demo APP](./assets/demo.gif)
 
-```bash
-# using npm
-npm start
 
-# OR using Yarn
-yarn start
-```
+## Features Implemented
 
-## Step 2: Start your Application
+- FF1: Welcome Screen
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-### For Android
+## Architecture & Patterms
 
-```bash
-# using npm
-npm run android
 
-# OR using Yarn
-yarn android
-```
+### Modules 
 
-### For iOS
+- App folder: Functional features in the app.
 
-```bash
-# using npm
-npm run ios
+    | App Modules      |Notes                      |
+    |------------------|--------------------------| 
+    | @core            | Domain Logic and Data Access |      
+    | @shared          | Function, hooks, utils, around the app modules except @core |   
+    | @ui-components   |  UI Library/Module to use around the app modules with Atomic Design Pattern (it can be found inside shared folder)|        
+    | @authentication  | Logics and components related with the authentication in the app |      
+    | @interview          | Logics and components related with the Interview in the app | 
 
-# OR using Yarn
-yarn ios
-```
+    Note: The app modules in the table are in dependency order, Authentication and movies  do not depend on each other.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+- Libs folder: Custom implementation for external libraries (D of SOLID), or custom functionalities.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+    | Libs Modules      |Notes                      |
+    |------------------|--------------------------|
+    | @translations    | Custom implementation for translation library (react-i18nex)|  
 
-## Step 3: Modifying your App
 
-Now that you have successfully run the app, let's modify it.
+### Highlights
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+- For The naming convention and The modules and files locations the choice was the Angular Guide Style.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- For get a better organization of the components and apply the S of SOLID I used the Atomic design.
 
-## Congratulations! :tada:
+- The Core module organization was inspired by the Onion Architecture.
 
-You've successfully run and modified your React Native App. :partying_face:
+  <img src='./assets/Onion-View.PNG' width='250'>
 
-### Now what?
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+### Highlight Libraries
 
-# Troubleshooting
+| Target            |Name                      |Notes |
+|-------------------|--------------------------|------|
+| State Maganement  | Redux                    |For me it's the best library/patterm to handle global state| 
+| Navigation        | React Navigation         |      | 
+| Unit Tests        | Jest and Testing Library |      | 
+| Styling           | Styled Componet          |      | 
+| Tanslations       | react-i18next         |      | 
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## Previous requirements
 
-# Learn More
+- Nodejs
+- Expo
 
-To learn more about React Native, take a look at the following resources:
+## Configuration
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Create .env file and add the value for the follow  variables
+
+    OPEN_IA_API_TOKEN=eyxxxxxxxxxxx
+
+
+## Run
+
+We only need run:
+
+    yarn start
+
+
+## Test
+
+We only need run:
+
+    yarn test
+
+### Current Coverage 
+
+| File   |      % Stmts      |  % Branch | % Funcs | % Lines |
+|----------|:-------------:|------:|------:|------:|
+| All files  |  92.7  |   80.32 | 91.37 |93.04|
+
+
+## References
+
+- [Angular Style Guide ](https://angular.io/guide/styleguide)
+- [UI Design](https://dribbble.com/shots/5529233-Movie-App-Interface-Design-Dark-Theme)
+- [Atomic design](https://bradfrost.com/blog/post/atomic-web-design/)
+- [Onion Architecture](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/)

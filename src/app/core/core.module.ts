@@ -2,10 +2,7 @@ import { HttpClient } from './shared/domain';
 import { HttpAxionClient } from './shared/infrastructure';
 export * from './shared/domain/dtos/';
 
-// Authentication
-import { AuthenticationRestProvider } from './authentication/infraestructure';
-import { AuthenticationProvider } from './authentication/domain/interfaces';
-import { LoginService } from './authentication/domain/services';
+
 
 // Movies
 import {
@@ -29,14 +26,7 @@ const castingRepository: CastingRepository = new CastingRestRepository(
   httpClient,
 );
 
-const authenticationProvider: AuthenticationProvider =
-  new AuthenticationRestProvider(httpClient);
-
-const loginService = new LoginService(authenticationProvider);
-
 export {
   moviesRepository,
   castingRepository,
-  authenticationProvider,
-  loginService,
 };

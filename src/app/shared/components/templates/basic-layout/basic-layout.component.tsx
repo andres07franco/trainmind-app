@@ -1,41 +1,49 @@
 import React from 'react';
-import { Headline } from '../../molecules';
-import {
-  Container,
-  Header,
-  Body,
-  ImageContent,
-  ImageContainer,
-} from './basic-layout.style';
-import { Image } from 'react-native';
+import { Container, Header, Body, IconContainer } from './basic-layout.style';
 import { Typography } from '../../atoms';
+import { NavBar } from '../../molecules';
 
 interface Props {
   title: string;
+  subtitle?: string;
+  icon?: JSX.Element;
   children: JSX.Element | (boolean | JSX.Element)[] | boolean;
+  options?: { showNavBar: boolean };
 }
-const BasicLayout: React.FC<Props> = ({ title, children }) => {
+const BasicLayout: React.FC<Props> = ({
+  icon,
+  title,
+  subtitle,
+  children,
+  options,
+}) => {
   return (
     <Container>
-      <Header>
+      {!!options?.showNavBar && (
+        <NavBar
+          onPressDots={() => {
+            throw new Error('Function not implemented.');
+          }}
+        />
+      )}
+      <Header align={subtitle ? 'left' : 'center'}>
+        <IconContainer>{icon}</IconContainer>
         <Typography type="Title" color="neutral100">
           {title}
         </Typography>
+        <Typography type="Caption" color="neutral100">
+          {subtitle}
+        </Typography>
       </Header>
-      <Body>
-        <ImageContainer>
-          <ImageContent>
-            <Image
-              source={require('../../../../../../assets/images/wamba.png')}
-              style={{ width: 160, height: 160 }}
-            />
-          </ImageContent>
-        </ImageContainer>
-
-        {children}
-      </Body>
+      <Body>{children}</Body>
     </Container>
   );
+};
+
+BasicLayout.defaultProps = {
+  subtitle: undefined,
+  icon: undefined,
+  options: { showNavBar: true },
 };
 
 export { BasicLayout };

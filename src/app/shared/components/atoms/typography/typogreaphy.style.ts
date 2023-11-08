@@ -24,7 +24,7 @@ export const Text = styled(NativeText)<TextProps>`
       case 'Title':
         return 30;
       case 'Subtitle':
-        return 20;
+        return 25;
       case 'Subtitle2':
         return 18;
       case 'Value':
@@ -32,7 +32,7 @@ export const Text = styled(NativeText)<TextProps>`
       case 'BigValue':
         return 22;
       case 'Caption':
-        return 12;
+        return 14;
       default:
         return 15;
     }
@@ -40,6 +40,7 @@ export const Text = styled(NativeText)<TextProps>`
   font-weight: ${({ type }) => {
     switch (type) {
       case 'Title':
+      case 'Subtitle':
         return 'bold';
       default:
         return 'normal';

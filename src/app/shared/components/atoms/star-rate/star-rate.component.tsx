@@ -1,8 +1,8 @@
 import React from 'react';
-import StarIcon from '@assets/star.svg';
-import StartOutlineIcon from '@assets/star-outline.svg';
-import StartBigIcon from '@assets/star-big.svg';
-import StartOutlineBigIcon from '@assets/star-outline-big.svg';
+import StarIcon from '@assets/icons/star.svg';
+import StartOutlineIcon from '@assets/icons/star-outline.svg';
+import StartBigIcon from '@assets/icons/star-big.svg';
+import StartOutlineBigIcon from '@assets/icons/star-outline-big.svg';
 import {
   GestureResponderEvent,
   TouchableWithoutFeedback,

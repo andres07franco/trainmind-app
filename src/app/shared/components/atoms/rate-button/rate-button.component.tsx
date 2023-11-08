@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import StarBig from '@assets/star-big.svg';
+import StarBig from '@assets/icons/star-big.svg';
 import { Container } from './rate-button.style';
 
 interface Props {
