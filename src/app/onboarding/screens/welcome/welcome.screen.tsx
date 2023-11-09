@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as yup from 'yup';
 import { BasicLayout } from '@ui-components/templates';
 import {
@@ -15,6 +15,7 @@ import { RootStackParamList } from 'src/app/app.routes';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AvatarContainer, Container } from './welcome.style';
+import firestore from '@react-native-firebase/firestore';
 
 const trainings: TrainingItem[] = [
   {
@@ -50,6 +51,15 @@ const WelcomeScreen: React.FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
+
+  useEffect(() => {
+    const getData = async () => {
+      const trainings = await firestore().collection('trainings').get();
+      console.log(trainings.docs[0].data());
+    };
+    getData();
+  }, []);
+
   return (
     <BasicLayout title="Welcome" options={{ showNavBar: false }}>
       <Container>
