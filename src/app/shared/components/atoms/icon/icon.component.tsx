@@ -105,8 +105,11 @@ interface Props {
 }
 export const Icon: React.FC<Props> = ({ code }) => {
   const theme = useTheme();
-
-  const icon = icons[code][theme.colorScheme ?? 'light'];
+  let localCode = code;
+  if (!icons.hasOwnProperty(code)) {
+    localCode = 'usa';
+  }
+  const icon = icons[localCode][theme.colorScheme ?? 'light'];
   return <>{icon}</>;
 };
 export default Icon;

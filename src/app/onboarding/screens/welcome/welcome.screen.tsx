@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { BasicLayout } from '@ui-components/templates';
 import {
@@ -10,33 +13,9 @@ import {
   TrainingItem,
   Typography,
 } from '@shared/components';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
-import { RootStackParamList } from 'src/app/app.routes';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import { useGetAllTraining } from '../../hooks';
 import { AvatarContainer, Container } from './welcome.style';
-import firestore from '@react-native-firebase/firestore';
-
-const trainings: TrainingItem[] = [
-  {
-    id: '1',
-    icon: 'usa',
-    title: 'English',
-    selected: false,
-  },
-  {
-    id: '2',
-    icon: 'pc-code',
-    title: 'Software Development',
-    selected: false,
-  },
-  {
-    id: '3',
-    icon: 'e-commerce',
-    title: 'CMX Exam',
-    selected: false,
-  },
-];
+import { RootStackParamList } from 'src/app/app.routes';
 
 const schema = yup.object().shape({
   name: yup.string().required('Email is required'),
@@ -44,7 +23,8 @@ const schema = yup.object().shape({
 
 const WelcomeScreen: React.FC = () => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-  const [data, setData] = useState(trainings);
+  const { trainings, setTrainings } = useGetAllTraining();
+
   const {
     control,
     reset,
@@ -52,13 +32,16 @@ const WelcomeScreen: React.FC = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  useEffect(() => {
-    const getData = async () => {
-      const trainings = await firestore().collection('trainings').get();
-      console.log(trainings.docs[0].data());
-    };
-    getData();
-  }, []);
+  const handleSelectTraining = (item: TrainingItem) => {
+    const nuevoArray = trainings.map((training) =>
+      training.id === item.id
+        ? { ...training, selected: !training.selected }
+        : training,
+    );
+    setTrainings(nuevoArray);
+  };
+
+  const handlePressStart = () => navigation.navigate('SelectTrainingScreen');
 
   return (
     <BasicLayout title="Welcome" options={{ showNavBar: false }}>
@@ -79,21 +62,12 @@ const WelcomeScreen: React.FC = () => {
           What do you like to train?
         </Typography>
         <TrainingCarousel
-          trainings={data}
-          onSelect={(item) => {
-            const nuevoArray = data.map((objeto) =>
-              objeto.id === item.id
-                ? { ...objeto, selected: !objeto.selected }
-                : objeto,
-            );
-            setData(nuevoArray);
-          }}
+          trainings={trainings}
+          onSelect={handleSelectTraining}
         />
         <ActionButton
           title={'Start'}
-          onPress={() => {
-            navigation.navigate('SelectTrainingScreen');
-          }}
+          onPress={handlePressStart}
           type="primary"
         />
       </Container>
