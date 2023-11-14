@@ -5,38 +5,29 @@ import {
   AvatarSizes,
   ResourcesBar,
   TrainingCarousel,
-  TrainingItem,
-  Typography,
+  TrainingProps,
 } from '@shared/components';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { RootStackParamList } from 'src/app/app.routes';
 import { AvatarContainer, Container, Title } from './select-training.style';
-
-const trainings: TrainingItem[] = [
-  {
-    id: '1',
-    icon: 'usa',
-    title: 'English',
-    selected: false,
-  },
-  {
-    id: '2',
-    icon: 'pc-code',
-    title: 'Software Development',
-    selected: false,
-  },
-  {
-    id: '3',
-    icon: 'e-commerce',
-    title: 'CMX Exam',
-    selected: false,
-  },
-];
+import { useGetTrainingsByUser } from '../../hooks';
+import { useSessionSelector } from '@shared/redux/selectors';
+import { useDispatch } from 'react-redux';
+import { chooseTraining } from '@training/redux';
 
 const SelectTrainingScreen: React.FC = () => {
+  const dispatch = useDispatch();
+  const { data } = useGetTrainingsByUser();
+  const { user } = useSessionSelector();
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+  const handelSelect = (item: TrainingProps) => {
+    dispatch(chooseTraining(item));
+    navigation.navigate('SelectActivityScreen');
+  };
+
   return (
-    <BasicLayout title="Hey Again Carlos!">
+    <BasicLayout title={`Hey Again ${user.name}!`}>
       <Container>
         <AvatarContainer>
           <AvatarImage size={AvatarSizes.large} name={'wamba'} />
@@ -44,12 +35,7 @@ const SelectTrainingScreen: React.FC = () => {
         <Title type="Subtitle2" color="neutral90">
           What do you want to train today?
         </Title>
-        <TrainingCarousel
-          trainings={trainings}
-          onSelect={(item) => {
-            navigation.navigate('SelectActivityScreen');
-          }}
-        />
+        <TrainingCarousel trainings={data} onSelect={handelSelect} />
         <ResourcesBar />
       </Container>
     </BasicLayout>

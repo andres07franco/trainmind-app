@@ -1,51 +1,42 @@
 import React from 'react';
 import { BasicLayout } from '@ui-components/templates';
 import {
-  ActivitiesProps,
+  ActivityProps,
   ActivityCarousel,
   Icon,
   ResourcesBar,
-  Typography,
 } from '@shared/components';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { useDispatch } from 'react-redux';
+import { useGetActivities } from '../../hooks';
+import { chooseActivity, useTrainingSelector } from '../../redux';
 import { RootStackParamList } from 'src/app/app.routes';
 import { Container, Overlap } from './select-activity.styles';
 
-const activties: ActivitiesProps[] = [
-  {
-    id: '1',
-    icon: 'interview',
-    title: 'Interviews',
-    instructor: { name: 'Sakura', icon: 'sakura' },
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  },
-  {
-    id: '2',
-    icon: 'questionnaire',
-    title: 'Questionnaire',
-    instructor: { name: 'Gero', icon: 'gero' },
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  },
-];
-
 const SelectActivityScreen: React.FC = () => {
+  const dispatch = useDispatch();
+  const { selectedTraining } = useTrainingSelector();
+  const { data } = useGetActivities();
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  
+  const handleSelect = (item: ActivityProps) => {
+    dispatch(chooseActivity(item));
+    navigation.navigate('TopicListScreen');
+  };
+
+  if (!selectedTraining) {
+    return <></>;
+  }
+
   return (
     <BasicLayout
-      icon={<Icon code="pc-code" />}
-      title="Software Development"
-      subtitle="2 Activities"
+      icon={<Icon code={selectedTraining.icon} />}
+      title={selectedTraining.title}
+      subtitle={selectedTraining.title}
     >
       <Container>
         <Overlap>
-          <ActivityCarousel
-            activties={activties}
-            onSelect={(item) => {
-              navigation.navigate('QuestionnaireListScreen');
-            }}
-          />
+          <ActivityCarousel activties={data} onSelect={handleSelect} />
         </Overlap>
         <ResourcesBar />
       </Container>

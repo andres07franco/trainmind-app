@@ -1,48 +1,19 @@
 import React from 'react';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm } from 'react-hook-form';
-import * as yup from 'yup';
-import { BasicLayout } from '@ui-components/templates';
 import {
+  BasicLayout,
   ActionButton,
   AvatarImage,
   AvatarSizes,
   FieldInput,
   TrainingCarousel,
-  TrainingItem,
   Typography,
 } from '@shared/components';
-import { useGetAllTraining } from '../../hooks';
 import { AvatarContainer, Container } from './welcome.style';
-import { RootStackParamList } from 'src/app/app.routes';
-
-const schema = yup.object().shape({
-  name: yup.string().required('Email is required'),
-});
+import { useWelcomScreen } from './welcome.hook';
 
 const WelcomeScreen: React.FC = () => {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-  const { trainings, setTrainings } = useGetAllTraining();
-
-  const {
-    control,
-    reset,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({ resolver: yupResolver(schema) });
-
-  const handleSelectTraining = (item: TrainingItem) => {
-    const nuevoArray = trainings.map((training) =>
-      training.id === item.id
-        ? { ...training, selected: !training.selected }
-        : training,
-    );
-    setTrainings(nuevoArray);
-  };
-
-  const handlePressStart = () => navigation.navigate('SelectTrainingScreen');
-
+  const { control, errors, trainings, handleSelectTraining, handlePressStart } =
+    useWelcomScreen();
   return (
     <BasicLayout title="Welcome" options={{ showNavBar: false }}>
       <Container>

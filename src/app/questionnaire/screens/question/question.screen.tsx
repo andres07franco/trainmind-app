@@ -7,7 +7,7 @@ import {
   AvatarSizes,
   FieldInput,
   TrainingCarousel,
-  TrainingItem,
+  TrainingProps,
   Typography,
 } from '@shared/components';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
@@ -16,7 +16,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AsnwerContent, AvatarContainer, Container, QuestionContent } from './question.style';
 
-const trainings: TrainingItem[] = [
+const trainings: TrainingProps[] = [
   {
     id: '1',
     icon: 'usa',

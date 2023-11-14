@@ -1,7 +1,8 @@
 export type Activity = {
   id: string;
   icon: string;
-  title: string;
-  instructor: { name: string; icon: string };
+  name: string;
   description: string;
+  type: string;
+  instructor: { name: string; code: string };
 };

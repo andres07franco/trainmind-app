@@ -11,15 +11,15 @@ import { AvatarItem } from '../../molecules';
 import { Icon } from '../../atoms';
 
 export type Props = {
-  title: string;
+  name: string;
   description: string;
-  instructor: { name: string; icon: string };
+  instructor: { name: string; code: string };
   icon: string
   onPress: () => void;
 };
 
 export const ActivityCard: React.FC<Props> = ({
-  title,
+  name,
   description,
   icon,
   instructor,
@@ -33,7 +33,7 @@ export const ActivityCard: React.FC<Props> = ({
             <Icon code={icon} />
           </IconContainer>
           <Title type="Subtitle" color="primary40">
-            {title}
+            {name}
           </Title>
           <Description type="Caption" color="quaternary40">
             {description}
@@ -42,7 +42,7 @@ export const ActivityCard: React.FC<Props> = ({
         <AvatarItem
           title="Instructor"
           name={instructor.name}
-          iconName={instructor.icon}
+          iconName={instructor.code}
         />
       </Container>
     </StyledCard>

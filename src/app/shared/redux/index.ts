@@ -1,1 +1,2 @@
-export * from './root.reducer';
+export * from './slices';
+export * from './slices';

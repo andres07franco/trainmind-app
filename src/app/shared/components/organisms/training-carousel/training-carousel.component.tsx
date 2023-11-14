@@ -3,13 +3,13 @@ import { FlatList } from 'react-native';
 import { TrainingCard, TrainingCardProps } from '../../molecules';
 import { Container } from './training-carousel.style';
 
-export type TrainingItem = {
+export type TrainingProps = {
   id: string;
 } & Omit<TrainingCardProps, 'onPress'>;
 
 interface Props {
-  trainings: TrainingItem[];
-  onSelect: (item: TrainingItem) => void;
+  trainings: TrainingProps[];
+  onSelect: (item: TrainingProps) => void;
 }
 export const TrainingCarousel: React.FC<Props> = ({ trainings, onSelect }) => {
   return (

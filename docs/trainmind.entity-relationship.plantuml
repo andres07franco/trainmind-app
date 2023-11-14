@@ -1,0 +1,38 @@
+@startuml Trainmind Relationship
+
+skin rose
+
+
+entity "Trainings" as e01 {
+  *id: string <<generated>>
+  --
+  title: string
+  icon: string
+  totalActivities: number
+}
+
+entity "Activities" as e02 {
+  *id: string <<generated>>
+  --
+  icon: string
+  name: string
+  description: string
+  type: string
+  instructor: { name: string code: string }
+  idTrainig:string <<FK>>
+}
+
+entity "Activity_Topics" as e03 {
+  *id: string <<generated>>
+  --
+  name: string
+  totalItems: number
+  idActivity: string <<FK>>
+}
+
+
+
+e01 ||..|{ e02
+e02 ||..|{ e03
+
+@enduml

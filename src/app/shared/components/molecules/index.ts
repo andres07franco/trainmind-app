@@ -8,3 +8,4 @@ export * from './avatar-item/avatar-item.component';
 export * from './nav-bar/nav-bar.component';
 export * from './resource-button/resource-button.component';
 export * from './activity-item/activity-item.component';
+export * from './topic-item/topic-item.component';
