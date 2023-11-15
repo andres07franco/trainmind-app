@@ -17,6 +17,7 @@ export class TopicFirebasetRepository implements TopicRepository {
         name: data.name,
         totalItems: data.totalItems,
         idActivity: data.idActivity,
+        idTopicActivity: data.idTopicActivity,
       } as Topic;
     });
   }

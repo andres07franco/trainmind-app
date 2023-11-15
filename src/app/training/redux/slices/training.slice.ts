@@ -1,10 +1,10 @@
-import { Topic } from '@core/trainings';
+import { Activity, Topic } from '@core/trainings';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { TrainingProps, ActivityProps } from '@shared/components';
+import { TrainingProps } from '@shared/components';
 
 export type TrainingState = {
   selectedTraining: TrainingProps | null;
-  selectedActivity: ActivityProps | null;
+  selectedActivity: Activity | null;
   selectedTopic: Topic | null;
 };
 
@@ -24,7 +24,7 @@ const trainingSlice = createSlice({
         selectedTraining: payload,
       };
     },
-    chooseActivity: (state, { payload }: PayloadAction<ActivityProps>) => {
+    chooseActivity: (state, { payload }: PayloadAction<Activity>) => {
       return {
         ...state,
         selectedActivity: payload,

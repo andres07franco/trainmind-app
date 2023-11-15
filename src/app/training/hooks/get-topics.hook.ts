@@ -1,5 +1,4 @@
 import { Topic, topicRepository } from '@core';
-import { ActivityProps } from '@shared/components';
 import { useTrainingSelector } from '../redux';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -18,15 +17,7 @@ export const useGetTopics = () => {
       const resutls = await topicRepository.getByIdActivity(
         selectedActivity.id,
       );
-      const resutlsMapped = resutls.map((item) => {
-        return {
-          id: item.id,
-          name: item.name,
-          totalItems: item.totalItems,
-          idActivity: item.idActivity,
-        };
-      });
-      setData(resutlsMapped);
+      setData(resutls);
     } catch (err) {
       console.log(err);
       setError(true);

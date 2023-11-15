@@ -2,14 +2,11 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import { ActivityCard, Props as ActivityItemProps } from '../../organisms';
 import { Container } from './activity-carousel.style';
-
-export type ActivityProps = {
-  id: string;
-} & Omit<ActivityItemProps, 'onPress'>;
+import { Activity } from '@core/trainings';
 
 interface Props {
-  activties: ActivityProps[];
-  onSelect: (item: ActivityProps) => void;
+  activties: Activity[];
+  onSelect: (item: Activity) => void;
 }
 export const ActivityCarousel: React.FC<Props> = ({ activties, onSelect }) => {
   return (

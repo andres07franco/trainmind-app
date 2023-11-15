@@ -9,9 +9,9 @@ import {
 
 import { HttpClient } from './shared/domain';
 import { HttpAxionClient } from './shared/infrastructure';
+import { QuestionnaireRepository } from './questionnaire/domain';
+import { QuestionnaireFirebaseRepository } from './questionnaire/infraestructure';
 export * from './shared/domain/dtos/';
-
-
 
 // init objects DI
 // const httpClient: HttpClient = new HttpAxionClient(
@@ -29,9 +29,15 @@ const activityRepository: ActivityRepository =
 
 const topicRepository: TopicRepository = new TopicFirebasetRepository();
 
+// questionnaire module
+const questionnaireRepository: QuestionnaireRepository =
+  new QuestionnaireFirebaseRepository();
+
 export {
   trainingRepository,
   activityRepository,
   topicRepository,
+  questionnaireRepository,
 };
 export * from './trainings';
+export * from './questionnaire';

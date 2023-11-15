@@ -1,5 +1,4 @@
-import { activityRepository } from '@core';
-import { ActivityProps } from '@shared/components';
+import { Activity, activityRepository } from '@core';
 import { useTrainingSelector } from '../redux';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -7,7 +6,7 @@ export const useGetActivities = () => {
   const { selectedTraining } = useTrainingSelector();
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
-  const [data, setData] = useState<ActivityProps[]>([]);
+  const [data, setData] = useState<Activity[]>([]);
 
   const getActivities = useCallback(async () => {
     try {
@@ -18,16 +17,7 @@ export const useGetActivities = () => {
       const resutls = await activityRepository.getByIdTraining(
         selectedTraining.id,
       );
-      const resutlsMapped = resutls.map((item) => {
-        return {
-          id: item.id,
-          icon: item.icon,
-          name: item.name,
-          description: item.description,
-          instructor: item.instructor,
-        };
-      });
-      setData(resutlsMapped);
+      setData(resutls);
     } catch (err) {
       console.log(err);
       setError(true);

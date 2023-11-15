@@ -3,4 +3,5 @@ export type Topic = {
   name: string;
   totalItems: number;
   idActivity: string;
+  idTopicActivity: string;
 };

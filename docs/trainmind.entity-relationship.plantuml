@@ -4,7 +4,7 @@ skin rose
 
 
 entity "Trainings" as e01 {
-  *id: string <<generated>>
+  *id: string
   --
   title: string
   icon: string
@@ -12,27 +12,42 @@ entity "Trainings" as e01 {
 }
 
 entity "Activities" as e02 {
-  *id: string <<generated>>
+  *id: string
   --
   icon: string
   name: string
   description: string
   type: string
   instructor: { name: string code: string }
+  --
   idTrainig:string <<FK>>
 }
 
-entity "Activity_Topics" as e03 {
-  *id: string <<generated>>
+entity "Topics" as e03 {
+  *id: string
   --
   name: string
   totalItems: number
+  --
   idActivity: string <<FK>>
+  idTopicActivity:string <<FK>>
 }
 
+entity "Questionnaires" as e04 {
+  *id: string
+  --
+  ...
+}
 
+entity "Interviews" as e05 {
+  *id: string
+  --
+  ...
+}
 
 e01 ||..|{ e02
 e02 ||..|{ e03
+e03 ||..|| e04
+e03 ||..|| e05
 
 @enduml

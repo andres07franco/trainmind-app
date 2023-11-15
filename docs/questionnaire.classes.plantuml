@@ -1,0 +1,29 @@
+@startuml Trainmind Relationship
+
+skin rose
+
+
+class "Questionnaire" as e01 {
+  *id: string
+  --
+  description: string
+  overview: string;
+  questions: Question[]
+}
+
+class "Question" as e02 {
+  question: string
+  correctAnswerCode: string[];
+  answers: Answer[]
+}
+
+class "Answer" as e03 {
+  code: string
+  answer: string;
+}
+
+
+e01 --* e02
+e02 --* e03
+
+@enduml
