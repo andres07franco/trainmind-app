@@ -1,5 +1,5 @@
 import React from 'react';
-import { BasicLayout } from '@ui-components/templates';
+import { BasicLayout, secureRender } from '@ui-components/templates';
 import {
   ActivityProps,
   ActivityCarousel,
@@ -18,29 +18,28 @@ const SelectActivityScreen: React.FC = () => {
   const { selectedTraining } = useTrainingSelector();
   const { data } = useGetActivities();
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-  
+
   const handleSelect = (item: ActivityProps) => {
     dispatch(chooseActivity(item));
     navigation.navigate('TopicListScreen');
   };
 
-  if (!selectedTraining) {
-    return <></>;
-  }
-
-  return (
-    <BasicLayout
-      icon={<Icon code={selectedTraining.icon} />}
-      title={selectedTraining.title}
-      subtitle={selectedTraining.title}
-    >
-      <Container>
-        <Overlap>
-          <ActivityCarousel activties={data} onSelect={handleSelect} />
-        </Overlap>
-        <ResourcesBar />
-      </Container>
-    </BasicLayout>
+  return secureRender(
+    (secureTraining) => (
+      <BasicLayout
+        icon={<Icon code={secureTraining.icon} />}
+        title={secureTraining.title}
+        subtitle={secureTraining.title}
+      >
+        <Container>
+          <Overlap>
+            <ActivityCarousel activties={data} onSelect={handleSelect} />
+          </Overlap>
+          <ResourcesBar />
+        </Container>
+      </BasicLayout>
+    ),
+    selectedTraining,
   );
 };
 

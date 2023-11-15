@@ -9,7 +9,7 @@ import {
 } from './topic-item.style';
 import { Icon } from '../../atoms';
 
-export interface Props {
+interface Props {
   title: string;
   questions: number,
   progress: number,

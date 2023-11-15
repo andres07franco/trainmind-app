@@ -1,5 +1,5 @@
 import React from 'react';
-import { BasicLayout } from '@ui-components/templates';
+import { BasicLayout, secureRender } from '@ui-components/templates';
 import {
   AvatarImage,
   AvatarSizes,
@@ -26,19 +26,22 @@ const SelectTrainingScreen: React.FC = () => {
     navigation.navigate('SelectActivityScreen');
   };
 
-  return (
-    <BasicLayout title={`Hey Again ${user.name}!`}>
-      <Container>
-        <AvatarContainer>
-          <AvatarImage size={AvatarSizes.large} name={'wamba'} />
-        </AvatarContainer>
-        <Title type="Subtitle2" color="neutral90">
-          What do you want to train today?
-        </Title>
-        <TrainingCarousel trainings={data} onSelect={handelSelect} />
-        <ResourcesBar />
-      </Container>
-    </BasicLayout>
+  return secureRender(
+    (secureUser) => (
+      <BasicLayout title={`Hey Again ${secureUser.name}!`}>
+        <Container>
+          <AvatarContainer>
+            <AvatarImage size={AvatarSizes.large} name={'wamba'} />
+          </AvatarContainer>
+          <Title type="Subtitle2" color="neutral90">
+            What do you want to train today?
+          </Title>
+          <TrainingCarousel trainings={data} onSelect={handelSelect} />
+          <ResourcesBar />
+        </Container>
+      </BasicLayout>
+    ),
+    user,
   );
 };
 

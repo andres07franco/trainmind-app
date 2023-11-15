@@ -3,19 +3,12 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export interface SessionState {
   sessionStarted: boolean;
-  user: User;
+  user: User | null;
 }
 
 const intialState: SessionState = {
   sessionStarted: false,
-  user: {
-    id:'',
-    email: '',
-    name: '',
-    phone: '',
-    deviceId:'',
-    trainings: [],
-  },
+  user: null,
 };
 
 const sessionSlice = createSlice({

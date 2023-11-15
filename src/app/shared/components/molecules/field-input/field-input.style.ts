@@ -30,6 +30,7 @@ export const InputStyled = styled(Input)<InputProps>`
 
 export const ErrorText = styled(Typography)`
   padding-top: ${PixelRatio.roundToNearestPixel(10)}px;
+  text-align: center;
 `;
 
 export const Container = styled(View)`
